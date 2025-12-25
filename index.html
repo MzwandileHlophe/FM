@@ -36,7 +36,7 @@
             padding: 0 20px;
         }
 
-        /* Navigation - Maximized Logo */
+        /* Navigation - Language and Partner Layout */
         nav {
             padding: 5px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -58,6 +58,32 @@
             width: auto;
             display: block;
             margin-left: -15px;
+        }
+
+        .nav-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        /* Language Selector Styling */
+        .lang-selector {
+            display: flex;
+            gap: 12px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-dim);
+        }
+
+        .lang-selector span {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .lang-selector span:hover, .lang-selector span.active {
+            color: var(--primary);
         }
 
         .btn-partner {
@@ -130,6 +156,7 @@
         @media (max-width: 768px) {
             .logo-img { height: 90px; }
             .calc-grid { grid-template-columns: 1fr; }
+            .nav-actions { align-items: center; }
         }
     </style>
 </head>
@@ -140,7 +167,14 @@
             <a href="#">
                 <img src="https://i.postimg.cc/tT4b9hSH/FM-Growth-Labs.png" alt="FM Growth Labs" class="logo-img">
             </a>
-            <a href="#contact" class="btn-partner">Partner with us</a>
+            <div class="nav-actions">
+                <div class="lang-selector">
+                    <span class="active">English</span>
+                    <span>SiSwati</span>
+                    <span>Swahili</span>
+                </div>
+                <a href="#contact" class="btn-partner">Partner with us</a>
+            </div>
         </div>
     </nav>
 
